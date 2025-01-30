@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Greetings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Happy Birthday! 🎂</h1>
+        <p>Leave a birthday greeting for the special person!</p>
+
+        <!-- Form to post a greeting -->
+        <div id="greeting-form">
+            <textarea id="message" placeholder="Write your birthday message here..." required></textarea><br>
+            <input type="text" id="sender" placeholder="Your name (optional)"><br>
+            <button onclick="postGreeting()">Post Greeting</button>
+        </div>
+
+        <!-- Display all greetings -->
+        <div id="greetings">
+            <h2>Greetings:</h2>
+            <!-- Greetings will be dynamically added here -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
