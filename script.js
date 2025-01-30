@@ -1,20 +1,15 @@
-// Function to post a greeting
-function postGreeting() {
-    const message = document.getElementById('message').value;
-    const sender = document.getElementById('sender').value || 'Anonymous';
-
-    // Create a new greeting element
-    const greetingElement = document.createElement('div');
-    greetingElement.className = 'greeting';
-    greetingElement.innerHTML = `
-        <p>${message}</p>
-        <p class="sender">- ${sender}</p>
-    `;
-
-    // Add the greeting to the list
-    document.getElementById('greetings').appendChild(greetingElement);
-
-    // Clear the form
-    document.getElementById('message').value = '';
-    document.getElementById('sender').value = '';
-}
+document.getElementById('messageForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const messageInput = document.getElementById('messageInput');
+    const message = messageInput.value.trim();
+    
+    if (message) {
+        const messagesList = document.getElementById('messagesList');
+        const listItem = document.createElement('li');
+        listItem.textContent = message;
+        messagesList.appendChild(listItem);
+        
+        messageInput.value = ''; // Clear the input
+    }
+});
