@@ -3,28 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Greetings</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Anonymous Birthday Card</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>🎉 Happy Birthday! 🎂</h1>
-        <p>Leave a birthday greeting for the special person!</p>
-
-        <!-- Form to post a greeting -->
-        <div id="greeting-form">
-            <textarea id="message" placeholder="Write your birthday message here..." required></textarea><br>
-            <input type="text" id="sender" placeholder="Your name (optional)"><br>
-            <button onclick="postGreeting()">Post Greeting</button>
-        </div>
-
-        <!-- Display all greetings -->
-        <div id="greetings">
-            <h2>Greetings:</h2>
-            <!-- Greetings will be dynamically added here -->
+        <h1>Happy Birthday!</h1>
+        <form id="messageForm">
+            <textarea id="messageInput" placeholder="Write your message here..." required></textarea>
+            <button type="submit">Add Message</button>
+        </form>
+        <div id="messagesContainer">
+            <h2>Messages:</h2>
+            <ul id="messagesList"></ul>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
